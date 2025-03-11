@@ -11,7 +11,6 @@
         }
         .navbar {
             background-color: #333;
-            overflow: hidden;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -60,14 +59,23 @@
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a routerLink="/">Inicio</a></li>
-            <li><a routerLink="/quienes-somos">Quienes Somos</a></li>
-            <li><a routerLink="/proyectos">Proyectos</a></li>
-            <li><a routerLink="/contacto">Contacto</a></li>
-            <li><a routerLink="/conocenos">Conócenos</a></li>
-        </ul>
-        </nav>
+    <nav class="navbar">
+        <div class="menu-icon" (click)="toggleMenu()">☰</div>
+        <div class="menu" [class.show]="menuOpen">
+            <a routerLink="/" (click)="closeMenu()">Inicio</a>
+            <a routerLink="/quienes-somos" (click)="closeMenu()">Quienes Somos</a>
+            <a routerLink="/proyectos" (click)="closeMenu()">Proyectos</a>
+            <a routerLink="/contacto" (click)="closeMenu()">Contacto</a>
+            <a routerLink="/conocenos" (click)="closeMenu()">Conócenos</a>
+        </div>
+    </nav>
+    
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("show");
+        }
+    </script>
 </body>
 </html>
