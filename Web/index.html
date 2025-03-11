@@ -1,79 +1,99 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar Responsive</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .navbar {
-            background-color: #333;
-            overflow: hidden;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-        }
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 14px 20px;
-            display: inline-block;
-        }
-        .navbar a:hover {
-            background-color: #575757;
-        }
-        .menu {
-            display: flex;
-        }
-        .menu-icon {
-            display: none;
-            font-size: 24px;
-            color: white;
-            cursor: pointer;
-        }
-        @media screen and (max-width: 600px) {
-            .menu {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                position: absolute;
-                top: 50px;
-                left: 0;
-                background-color: #333;
-            }
-            .menu a {
-                text-align: center;
-                padding: 10px;
-                width: 100%;
-            }
-            .menu-icon {
-                display: block;
-            }
-            .menu.show {
-                display: flex;
-            }
-        }
-    </style>
-</head>
-<body>
-    <nav class="navbar">
-        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
-        <div class="menu" id="menu">
-            <a href="#quienes-somos">¿Quiénes somos?</a>
-            <a href="#proyectos">Proyectos realizados</a>
-            <a href="#contacto">Contacto</a>
-            <a href="#conocenos">Conócenos</a>
-        </div>
-    </nav>
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("menu");
-            menu.classList.toggle("show");
-        }
-    </script>
-</body>
-</html>
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="logo">FAJY SOLUTIONS </div>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#home">inicio</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="overlay"></div>
+
+<section id="home">
+    <div class="bg-effect bg-effect-1"></div>
+    <div class="section-content">
+        <h3 class="section-title">quienes somos?</h3>
+        <p class="section-description">En fajy solutions, somos un equipo apasionado que nos  dedicados a la creación de páginas web, aplicaciones móviles y servicios de mantenimiento relacionados. Nuestra misión es proporcionar soluciones tecnológicas innovadoras y personalizadas que ayuden a nuestros clientes a destacar en el mundo digital. Con un enfoque en la calidad, la creatividad y la satisfacción del cliente, trabajamos incansablemente para transformar tus ideas en realidades digitales que impulsen el crecimiento de tu negocio.</p>
+    </div>
+</section>
+
+
+
+<section id="services">
+    <div class="bg-effect bg-effect-1"></div>
+
+
+    <div class="section-content">
+       
+        <div class="cards">
+            <div class="card travel">
+              <h2 class="title"> paginas web </h2>
+              <p class="description">
+                <li>Diseño Personalizado: Creamos diseños únicos y personalizados que reflejan la identidad de tu marca.</li>
+                <br>
+                <li>Desarrollo Responsivo: Aseguramos que tu página web se vea y funcione perfectamente en todos los dispositivos, desde computadoras de escritorio hasta teléfonos móviles.</li>
+              </p>
+            </div>
+            <div class="card food">
+              <h2 class="title">app movil</h2>
+              <p class="description">
+                Experience global cuisines and unique flafors that fantalize your
+                tasle buds
+              </p>
+            </div>
+            <div class="card tech">
+              <h2 class="title">Tech innofations</h2>
+              <p class="description">
+                Explone cuttingedge technologies that are shaping the future of our
+                world
+              </p>
+            </div>
+            <br>
+            <div class="card tech">
+              <h2 class="title">Tech innofations</h2>
+              <p class="description">
+                Explone cuttingedge technologies that are shaping the future of our
+                world
+              </p>
+            </div>
+            <div class="card tech">
+              <h2 class="title">Tech innofations</h2>
+              <p class="description">
+                Explone cuttingedge technologies that are shaping the future of our
+                world
+              </p>
+            </div>
+          
+            
+
+          </div> 
+
+          </div>
+</section>
+
+
+<section id="portfolio">
+    <div class="bg-effect bg-effect-2"></div>
+    <div class="section-content">
+        <h1 class="section-title">Portfolio</h1>
+        <p class="section-description">Discover our groundbreaking projects and success stories</p>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="bg-effect bg-effect-1"></div>
+    <div class="section-content">
+        <h1 class="section-title">Contact</h1>
+        <p class="section-description">Let's create something amazing together</p>
+    </div>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.jss">
+</section>    
