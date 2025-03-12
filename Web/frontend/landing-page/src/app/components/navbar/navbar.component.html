@@ -60,16 +60,15 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="menu-icon" (click)="toggleMenu()">☰</div>
-        <div class="menu" [class.show]="menuOpen">
-            <a routerLink="/" (click)="closeMenu()">Inicio</a>
-            <a routerLink="/quienes-somos" (click)="closeMenu()">Quienes Somos</a>
-            <a routerLink="/proyectos" (click)="closeMenu()">Proyectos</a>
-            <a routerLink="/contacto" (click)="closeMenu()">Contacto</a>
-            <a routerLink="/conocenos" (click)="closeMenu()">Conócenos</a>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="menu" id="menu">
+            <a routerLink="/">Inicio</a>
+            <a routerLink="/quienes-somos" routerLinkActive="active">Quienes Somos</a>
+            <a routerLink="/proyectos" routerLinkActive="active">Proyectos</a>
+            <a routerLink="/contacto">Contacto</a>
+            <a routerLink="/conocenos">Conócenos</a>
         </div>
     </nav>
-    
 
     <script>
         function toggleMenu() {
